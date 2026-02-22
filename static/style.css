@@ -23,3 +23,31 @@ h1 {
     box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
+button {
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0,255,255,0.8);
+}
+
+canvas {
+    border-radius: 20px;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
