@@ -52,25 +52,3 @@ function draw() {
     });
 }
 
-function runDijkstra() {
-    let start = prompt("Enter Start Node (e.g. N0)");
-
-    let graph = {};
-    nodes.forEach(n => graph[n.id] = []);
-
-    edges.forEach(e => {
-        graph[e.from].push([e.to, e.weight]);
-        graph[e.to].push([e.from, e.weight]);
-    });
-
-    fetch("/run", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ graph, start })
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("result").innerHTML =
-            "<h3>Distances:</h3>" + JSON.stringify(data, null, 2);
-    });
-}
